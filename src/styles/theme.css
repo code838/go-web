@@ -1,0 +1,26 @@
+@theme {
+	--color-primary: #ffffff;
+	--color-subtitle: rgba(255 255 255 / 80%);
+	--color-secondary: #6e6e70;
+	--color-sec-hover: rgba(255 255 255 / 60%);
+	--color-bg: #0e0e10;
+	--color-border: #1d1d1d;
+	--color-panel: #141414;
+	--color-card: rgba(255 255 255 / 5%);
+	--color-button: #303030;
+
+	--color-skeleton: rgba(255 255 255 / 10%);
+
+	--color-brand: #6741ff;
+	--color-brand-2: #1af578;
+	--color-brand-3: #67e8f2;
+
+	--color-disabled: #999;
+
+	--color-red: #f75353;
+	--color-gold: #e5ad54;
+
+	--font-sans: 'Poppins', sans-serif;
+
+	/* --transition: all 0.2s ease-in-out; */
+}

@@ -1,0 +1,10 @@
+{
+  "name": "1U VIP",
+  "short_name": "1U VIP",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111827",
+  "lang": "zh-CN"
+}

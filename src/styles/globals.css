@@ -1,0 +1,159 @@
+@import 'tailwindcss';
+@import './theme.css';
+@import './table.css';
+
+@plugin "tailwindcss-animate";
+
+@layer base {
+	html {
+		@apply text-primary bg-bg h-full leading-tight overflow-x-hidden;
+	}
+
+	body {
+		@apply h-full bg-none overflow-x-hidden;
+	}
+	* {
+		@apply border-border;
+	}
+
+	.windows {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	input:placeholder-shown {
+		text-overflow: ellipsis;
+	}
+
+	button {
+		@apply cursor-pointer disabled:cursor-not-allowed;
+	}
+}
+
+@utility scrollbar-none {
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@utility content {
+	@apply mx-auto max-w-[1440px] px-8;
+}
+
+@utility dropdown {
+	@apply bg-card rounded-xl border border-white/10 backdrop-blur;
+}
+
+/* Header navigation smooth scrolling */
+.nav-scroll {
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Optional: Add subtle scroll indicators */
+.nav-scroll::-webkit-scrollbar {
+	height: 2px;
+}
+
+.nav-scroll::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.nav-scroll::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 1px;
+}
+
+.nav-scroll::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+/* 公告弹框滚动条样式 - 细且美观 */
+.custom-thin-scrollbar {
+	/* Firefox */
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* WebKit 浏览器 (Chrome, Safari, Edge) */
+.custom-thin-scrollbar::-webkit-scrollbar {
+	width: 4px;
+}
+
+.custom-thin-scrollbar::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.custom-thin-scrollbar::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 2px;
+}
+
+.custom-thin-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+/* 区号选择器滚动条样式 */
+.custom-scrollbar {
+	/* Firefox */
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+	width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+/* Floating animation for invite-join page decorations */
+@keyframes float {
+	0%, 100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-20px) rotate(5deg);
+	}
+}
+
+@keyframes float-delayed {
+	0%, 100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-15px) rotate(-5deg);
+	}
+}
+
+.animate-float {
+	animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+	animation: float-delayed 8s ease-in-out infinite;
+	animation-delay: 1s;
+}
+
+/* DOUYU font title effects for invite-join page */
+.douyu-title {
+	letter-spacing: 0.02em;
+	font-weight: 900;
+	transform: skewX(-5deg);
+	background: linear-gradient(180deg, currentColor 0%, currentColor 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+}

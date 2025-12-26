@@ -1,0 +1,20 @@
+.table {
+	@apply w-full overflow-hidden rounded-xl bg-white/5 text-center;
+	thead {
+		@apply bg-white/5;
+		th {
+			@apply text-secondary px-4 py-2 text-sm font-medium;
+		}
+	}
+	tbody {
+		@apply divide-bg text-subtitle divide-y;
+	}
+	tbody tr td {
+		@apply px-2 py-4;
+	}
+}
+.table_lg {
+	tbody tr td {
+		@apply h-[64px];
+	}
+}
